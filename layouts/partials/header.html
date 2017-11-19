@@ -11,16 +11,19 @@
     {{ .Hugo.Generator }}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Lato" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ "css/styles.css" | relURL}}" />
 </head>
 
 <body>
     <div id="container">
         <header>
-            <h1>
-                <a href="/">{{ .Site.Title | markdownify }}</a>
-            </h1>
+            <a href="https://formapi.io" class="title-link">
+                <img class="logo" src="/images/logo-small.svg" alt="FormAPI Logo" />
+                <h1>
+                    {{ .Site.Title | markdownify }}
+                </h1>
+            </a>
 
             <ul id="social-media">
                 {{ if .Site.Author.twitter }}
@@ -48,7 +51,7 @@
                 {{ end }}
             </ul>
             {{ with .Site.Params.tagline }}
-            <p><em>{{ . | markdownify }}</em></p>
+            <p class="tagline">{{ . | markdownify }}</p>
             {{ end }}
         </header>
 
