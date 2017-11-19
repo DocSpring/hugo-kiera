@@ -1,8 +1,13 @@
 </main>
     <footer>
-        <h6>{{ .Site.Copyright | markdownify }} | 
-            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
-            <a href="{{.Site.BaseURL}}index.xml">Subscribe</a></h6>
+        <h6>
+            <span>
+                Copyright &copy; 2017
+                <a href="https://formapi.io">{{ .Site.Copyright | markdownify }}</a>
+            </span>
+            <span><a href="https://gohugo.io">Powered by Hugo</a></span>
+            <span><a href="{{.Site.BaseURL}}index.xml">RSS</a></span>
+        </h6>
     </footer>
 </div>
 <script src="{{ "js/scripts.js" | relURL }}"></script>

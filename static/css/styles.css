@@ -195,7 +195,7 @@ p.tagline {
   font-size: 0.9em;
 }
 
-#container main article p code {
+#container main article p code, #container main article li code {
   padding: 0.2em;
   background-color: #eee;
   font-size: 0.9em;
@@ -218,9 +218,7 @@ p.tagline {
 }
 
 #container main h1 {
-  margin-bottom: 1rem;
-  border-bottom: solid 1px #cecece;
-  padding-bottom: 8px;
+  margin-bottom: 14px;
 }
 
 #container footer {
@@ -231,11 +229,30 @@ p.tagline {
   font-size: 0.8em;
 }
 
+#container footer h6 span {
+  padding-right: 11px;
+  margin-right: 10px;
+  border-right: 1px solid #bbb;
+}
+#container footer h6 span:last-child {
+  border-right: none;
+}
+
+#container footer h6 a:hover {
+  opacity: 0.8;
+}
+
 .meta-aside, #container main section#home ul li aside, #container main article aside {
   margin: 0.5em 0;
   font-family: "Open+Sans", sans-serif;
   color: #909090;
   font-size: 0.8em;
+}
+
+#container main article aside {
+  border-bottom: 1px solid #cecece;
+  padding-bottom: 17px;
+  margin-bottom: 37px;
 }
 
 .meta-aside ul, #container main section#home ul li aside ul, #container main article aside ul {
@@ -380,22 +397,37 @@ table thead {
 }
 
 blockquote {
-  margin: 1em;
-  border-left: solid 0.1em #cecece;
+  margin: 1em 0;
+  /* border-left: solid 0.1em #cecece; */
   padding: 0.5em 2em;
   position: relative;
-  background-color: #efefef;
-  box-shadow: 0 -1px 0 #bbbbbb inset;
+  background-color: #f2f2f2;
+  /* box-shadow: 0 -1px 0 #bbbbbb inset; */
 }
 
-blockquote::before {
+/* blockquote::before {
   content: "\f10d";
   font-size: 3em;
   font-family: "FontAwesome";
-  color: rgba(192, 192, 192, 0.3);
+  color: rgba(192, 192, 192, 0.2);
   position: absolute;
   left: 6px;
   top: 0;
+} */
+
+.footnotes {
+  margin-top: 70px;
+}
+.footnotes hr {
+  border: none;
+  height: 1px;
+  background-color: #cecece;
+}
+.footnotes ol {
+  padding-left: 19px;
+}
+.footnotes li {
+  font-size: 80%;
 }
 
 @media only screen and (max-width: 800px) {
