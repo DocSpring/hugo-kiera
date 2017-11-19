@@ -98,11 +98,32 @@ p.tagline {
 }
 
 @media only screen and (max-width: 800px) {
-  #container header ul {
+  #container header {
+    border-bottom: 1px solid #cecece;
+    padding-bottom: 25px;
+  }
+  main article h1 {
+    margin-top: 4px;
+  }
+
+  #container header h1 {
     float: none;
+    margin-bottom: 0;
+  }
+  #container header ul#social-media {
+    display: none;
   }
   #container header ul li {
     margin: 0 1em 0 0;
+  }
+  #container header ul li a {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  #container footer h6 span {
+    font-size: 10px;
   }
 }
 
@@ -230,8 +251,8 @@ p.tagline {
 }
 
 #container footer h6 span {
-  padding-right: 11px;
-  margin-right: 10px;
+  padding-right: 8px;
+  margin-right: 7px;
   border-right: 1px solid #bbb;
 }
 #container footer h6 span:last-child {
