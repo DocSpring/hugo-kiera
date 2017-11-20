@@ -17,6 +17,10 @@ time {
   font-weight: bold;
 }
 
+ol li, ul li {
+  margin: 14px 0;
+}
+
 p.tagline {
   color: #aaa;
   padding-top: 3px;
