@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{{ .Site.Title }}</title>
+    <title>{{ .Site.Title }}{{ if ne .Title .Site.Title }} - {{ .Title }}{{ end }}</title>
     <meta name="description" content="{{ .Site.Params.Description }}">
     <meta name="author" content="{{ .Site.Author.name }}">
     {{ .Hugo.Generator }}
@@ -20,8 +20,8 @@
     <meta property="og:image:height" content="400">
     <meta property="og:image:alt" content="{{ .Site.Params.Description }}">
     <meta property="og:description" content="FormAPI makes it easy for programmers to generate PDFs.">
-    <meta property="og:title" content="{{ .Site.Title }}">
-    <meta property="og:url" content="https://formapi.io/blog">
+    <meta property="og:title" content="{{ .Site.Title }}{{ if ne .Title .Site.Title }} - {{ .Title }}{{ end }}">
+    <meta property="og:url" content="https://formapi.io{{ .URL }}">
 </head>
 
 <body>
