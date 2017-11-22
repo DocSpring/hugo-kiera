@@ -2,7 +2,9 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   color: #333333;
 }
 
@@ -13,8 +15,7 @@ h4,
 h5,
 h6,
 time {
-  font-family: "Lato", sans-serif;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 hr {
@@ -140,7 +141,6 @@ p.tagline {
 #container nav {
   /* border-bottom: solid 1px #cecece; */
   padding-bottom: 0.5em;
-  font-family: "Lato", sans-serif;
 }
 
 #container nav ul {
