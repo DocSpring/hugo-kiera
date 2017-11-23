@@ -287,6 +287,16 @@ p.tagline {
   margin-bottom: 37px;
 }
 
+#container main article aside ul {
+  float: left;
+}
+#container main article aside .next-post {
+  float: right;
+}
+#container main article aside .clear-fix {
+  clear: both;
+}
+
 .meta-aside ul, #container main section#home ul li aside ul, #container main article aside ul {
   margin: 0;
   padding: 0;
@@ -435,6 +445,10 @@ blockquote {
   position: relative;
   background-color: #f2f2f2;
   /* box-shadow: 0 -1px 0 #bbbbbb inset; */
+}
+
+blockquote p {
+  word-break: break-all;
 }
 
 /* blockquote::before {
