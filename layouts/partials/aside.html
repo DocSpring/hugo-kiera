@@ -32,12 +32,15 @@
         <li>{{ .ReadingTime }} min read</li>
     </ul>
 
-    {{ with .NextInSection }}
-    <div class="next-post">
-        <strong><a href="{{.RelPermalink}}">{{ .Title }}
-            <i class="fa fa-chevron-circle-right"></i>
-        </a></strong>
-    </div>
+    {{ if $.Scratch.Get "single" }}
+        {{ with .NextInSection }}
+        <div class="next-post">
+            <strong><a href="{{.RelPermalink}}">{{ .Title }}
+                <i class="fa fa-chevron-circle-right"></i>
+            </a></strong>
+        </div>
+        {{ end }}
+        {{ $.Scratch.Set "single" false }}
     {{ end }}
     <div class="clear-fix"></div>
 </aside>
