@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: roboto, helvetica neue, -apple-system, BlinkMacSystemFont,
+  font-family: "Roboto Slab", helvetica neue, -apple-system, BlinkMacSystemFont,
     segoe ui, Arial, sans-serif, apple color emoji, segoe ui emoji,
     segoe ui symbol;
   font-style: normal;
@@ -37,16 +37,7 @@ p.tagline {
 }
 article p,
 article ul {
-  font-family: roboto slab, roboto, helvetica neue, -apple-system,
-    BlinkMacSystemFont, segoe ui, Arial, sans-serif, apple color emoji,
-    segoe ui emoji, segoe ui symbol;
   color: #555;
-}
-section#home > ul > li > aside,
-section#home > ul > li > p {
-  font-family: roboto slab, roboto, helvetica neue, -apple-system,
-    BlinkMacSystemFont, segoe ui, Arial, sans-serif, apple color emoji,
-    segoe ui emoji, segoe ui symbol;
 }
 #container {
   margin: 0;
@@ -71,7 +62,7 @@ section#home > ul > li > p {
   height: 30px;
   box-shadow: none;
   float: left;
-  margin-top: 35px;
+  margin-top: 36px;
   margin-right: 14px;
   opacity: 0.7;
 }
@@ -79,7 +70,7 @@ section#home > ul > li > p {
   font-size: 1.7rem;
   color: #555;
   font-weight: 400;
-  margin-top: 36px;
+  margin-top: 35px;
   margin-bottom: 16px;
   float: left;
   opacity: 0.7;
