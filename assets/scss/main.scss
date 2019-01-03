@@ -1,11 +1,15 @@
+@import "normalize.scss";
+@import "syntax.scss";
+
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: roboto, helvetica neue, -apple-system, BlinkMacSystemFont,
+    segoe ui, Arial, sans-serif, apple color emoji, segoe ui emoji,
+    segoe ui symbol;
   font-style: normal;
-  color: #333333;
+  color: #333;
 }
 
 h1,
@@ -15,7 +19,7 @@ h4,
 h5,
 h6,
 time {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 hr {
@@ -23,17 +27,27 @@ hr {
   height: 1px;
   background-color: #cecece;
 }
-
 ol li,
 ul li {
   margin: 3px 0;
 }
-
 p.tagline {
   color: #aaa;
   padding-top: 3px;
 }
-
+article p,
+article ul {
+  font-family: roboto slab, roboto, helvetica neue, -apple-system,
+    BlinkMacSystemFont, segoe ui, Arial, sans-serif, apple color emoji,
+    segoe ui emoji, segoe ui symbol;
+  color: #555;
+}
+section#home > ul > li > aside,
+section#home > ul > li > p {
+  font-family: roboto slab, roboto, helvetica neue, -apple-system,
+    BlinkMacSystemFont, segoe ui, Arial, sans-serif, apple color emoji,
+    segoe ui emoji, segoe ui symbol;
+}
 #container {
   margin: 0;
   padding: 0;
@@ -42,52 +56,44 @@ p.tagline {
   display: flex;
   flex-direction: column;
 }
-
 #container > * {
   width: 700px;
   margin: 0 auto;
 }
-
 @media only screen and (max-width: 800px) {
   #container > * {
     width: auto;
     margin: 0 1.2em;
   }
 }
-
-/* #container header {
-  margin-bottom: 1em;
-} */
-
-#container header img.logo {
-  width: 36px;
+#container header svg.logo {
+  width: 30px;
+  height: 30px;
   box-shadow: none;
   float: left;
-  margin-top: 30px;
+  margin-top: 35px;
   margin-right: 14px;
+  opacity: 0.7;
 }
-
 #container header h1 {
-  font-size: 2.1rem;
-  font-weight: 200;
-  margin-top: 29px;
+  font-size: 1.7rem;
+  color: #555;
+  font-weight: 400;
+  margin-top: 36px;
   margin-bottom: 16px;
   float: left;
+  opacity: 0.7;
 }
-
 #container header a.title-link {
   transition: opacity 0.2s;
   display: block;
 }
-
 #container header a.title-link:hover {
   opacity: 0.6;
 }
-
 #container header h1 a {
   color: #444;
 }
-
 #container header ul {
   display: flex;
   margin: 0;
@@ -96,11 +102,9 @@ p.tagline {
   float: right;
   margin-top: 38px;
 }
-
 #container header ul li {
   margin-left: 1em;
 }
-
 #container header ul a {
   color: #aaa;
   transition: color 0.2s;
@@ -108,29 +112,24 @@ p.tagline {
 #container header ul a:hover {
   color: #444;
 }
-
-
 #container header ul#header-links {
   margin-right: 10px;
 }
-
 #container header ul#header-links li a.active {
   padding-bottom: 5px;
-  font-weight: bold;
+  font-weight: 700;
   color: #444;
   border-bottom: 2px solid #999;
 }
-
 @media only screen and (max-width: 800px) {
   #container header {
     border-bottom: 1px solid #cecece;
     padding-bottom: 25px;
   }
-  main article h1 {
+  main article h2 {
     margin-top: 4px;
   }
-
-  #container header h1 {
+  #container header h2 {
     float: none;
     margin-bottom: 0;
   }
@@ -144,18 +143,15 @@ p.tagline {
     font-size: 22px;
   }
 }
-
 @media only screen and (max-width: 370px) {
   #container footer h6 span {
     font-size: 10px;
   }
 }
-
 #container nav {
   border-bottom: solid 1px #cecece;
   padding-bottom: 0.5em;
 }
-
 #container nav ul {
   margin: 0;
   padding: 0;
@@ -163,66 +159,53 @@ p.tagline {
   display: flex;
   justify-content: flex-end;
 }
-
 #container nav ul li {
   margin-left: 1em;
 }
-
 #container nav ul li a.active {
   padding-bottom: 8px;
   border-bottom: 4px solid #cecece;
 }
-
 #container main {
   flex: 1 0 0;
   line-height: 1.5;
   font-size: 1.2rem;
 }
-
 #container main section#home ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
 #container main section#home ul li {
-  margin: 0.5em 0;
+  margin: 1.25em 0;
   padding-bottom: 0.5em;
 }
-
 #container main section#home ul li h2 {
   margin: 0.2em 0;
 }
-
 #container main section#home span {
   color: #444;
 }
-
 #container main section#list ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
 #container main section#list ul li {
   padding: 0.5em 0;
   border-bottom: 1px solid #cecece;
 }
-
 #container main section#list ul li time,
 #container main section#list ul li span.count {
   float: right;
 }
-
 #container main section#list ul li:last-child {
   border-bottom: none;
 }
-
 #container main section.post-nav {
   margin-top: 1em;
   margin-bottom: 1.2em;
 }
-
 #container main section.post-nav ul {
   margin: 0.5em 0;
   padding: 0.5em 0 0;
@@ -232,28 +215,21 @@ p.tagline {
   border-top: 1px solid #f7f7f7;
   font-size: 0.9em;
 }
-
 #container main article {
   margin-bottom: 2em;
 }
-
 #container main article pre {
-  /* background-color: #eee; */
   overflow-x: auto;
   padding: 0.8em;
   font-size: 0.9em;
-  /* box-shadow: 0 -1px 0 #bbbbbb inset; */
 }
-
 #container main article pre code {
   font-size: 0.8em;
 }
-
 #container main article .shell-session pre code {
   white-space: pre-wrap;
   font-size: 0.7em;
 }
-
 #container main article p code,
 #container main article li code {
   padding: 0.14em 0.22em;
@@ -261,41 +237,31 @@ p.tagline {
   font-size: 0.9em;
   white-space: nowrap;
 }
-
 #container main article p a code,
 #container main article li a code {
   background-color: #e8f6ff;
 }
-
 #container main article p kbd {
   display: inline-block;
   padding: 0.2em 0.3em;
   font-size: 0.8em;
   line-height: 1em;
-  color: #555555;
+  color: #555;
   vertical-align: middle;
   background-color: #fcfcfc;
   border-width: 1px;
   border-style: solid;
-  border-color: #cccccc #cccccc #bbbbbb;
+  border-color: #ccc #ccc #bbb;
   border-image: none;
   border-radius: 3px;
-  box-shadow: 0 -1px 0 #bbbbbb inset;
+  box-shadow: 0 -1px 0 #bbb inset;
 }
-
-#container main h1 {
-  margin-bottom: 14px;
-  font-size: 27px;
-}
-
 #container footer {
   border-top: solid 1px #cecece;
 }
-
 #container footer h6 {
   font-size: 0.8em;
 }
-
 #container footer h6 span {
   padding-right: 8px;
   margin-right: 7px;
@@ -304,27 +270,29 @@ p.tagline {
 #container footer h6 span:last-child {
   border-right: none;
 }
-
 #container footer h6 a:hover {
   opacity: 0.8;
 }
-
 .meta-aside,
 #container main section#home ul li aside,
 #container main article aside {
   margin: 0.5em 0;
-  font-family: "Open+Sans", sans-serif;
   color: #909090;
   font-size: 0.8em;
 }
-
-#container main article aside {
-  border-bottom: 1px solid #cecece;
-  padding-bottom: 17px;
-  margin-bottom: 37px;
+#container main article > h2:first-child {
+  margin-bottom: 0.2em;
 }
-
+#container main article aside {
+  color: #909090;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
 #container main article aside ul {
+  margin-top: 2px;
+  padding: 0;
+  list-style: none;
+  color: #909090;
   float: left;
 }
 #container main article aside .next-post {
@@ -333,53 +301,42 @@ p.tagline {
 #container main article aside .clear-fix {
   clear: both;
 }
-
 .meta-aside ul,
-#container main section#home ul li aside ul,
-#container main article aside ul {
+#container main section#home ul li aside ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
 .meta-aside ul li,
 #container main section#home ul li aside ul li,
 #container main article aside ul li {
   margin: 0;
   padding: 0;
 }
-
 a {
   color: #444;
   text-decoration: none;
 }
-
 main a {
   color: #0f8cb6;
   text-decoration: none;
 }
-
 main a:hover {
   color: #076683;
 }
-
 .image,
 figure img,
 img {
   width: 100%;
 }
-
 img.shadow {
-  box-shadow: 0 3px 3px #bbbbbb;
+  box-shadow: 0 3px 3px #bbb;
 }
-
 .full-image,
 figure.full img,
 img[src*="full"] {
   width: 100%;
-  /* box-shadow: 0 3px 3px #bbbbbb; */
 }
-
 @supports (width: 100vw) {
   .full-image,
   figure.full img,
@@ -392,14 +349,12 @@ img[src*="full"] {
     margin-right: -50vw;
   }
 }
-
 .mid-image,
 figure.mid img,
 img[src*="mid"] {
   width: 100%;
-  box-shadow: 0 3px 3px #bbbbbb;
+  box-shadow: 0 3px 3px #bbb;
 }
-
 @supports (width: 100vw) {
   .mid-image,
   figure.mid img,
@@ -422,16 +377,14 @@ img[src*="mid"] {
     }
   }
 }
-
 .float-image,
 figure.float img,
 img[src*="float"] {
   width: 300px;
   float: left;
   margin: 0 1em 1em -3em;
-  box-shadow: 0 3px 3px #bbbbbb;
+  box-shadow: 0 3px 3px #bbb;
 }
-
 @media only screen and (max-width: 800px) {
   .float-image,
   figure.float img,
@@ -441,16 +394,14 @@ img[src*="float"] {
     width: 100%;
   }
 }
-
 .float-image-right,
 figure.float-right img,
 img[src*="float-right"] {
   width: 300px;
   float: right;
   margin: 0 -3em 1em 1em;
-  box-shadow: 0 3px 3px #bbbbbb;
+  box-shadow: 0 3px 3px #bbb;
 }
-
 @media only screen and (max-width: 800px) {
   .float-image-right,
   figure.float-right img,
@@ -460,86 +411,58 @@ img[src*="float-right"] {
     width: 100%;
   }
 }
-
 figure {
   margin: 0;
 }
-
 figure figcaption p {
   margin-top: 0.3em;
   font-size: 0.8em;
   font-style: italic;
 }
-
 figure.full {
   margin: 0;
 }
-
 figure.mid {
   margin: 0;
 }
-
 figure.float {
   margin: 0;
   float: left;
 }
-
 figure.float-right {
   margin: 0;
   float: right;
 }
-
 figure.float-right figcaption {
   margin-left: 1em;
 }
-
 table {
   width: 100%;
-  /* border-bottom: solid 1px #cecece; */
 }
-
 table thead {
   background-color: #cecece;
 }
-
 table tr td {
   padding: 6px;
   border-bottom: 1px solid #ccc;
 }
-
 table tr th {
   padding: 6px 10px;
   background-color: #0f8cb6;
-  color: white;
+  color: #fff;
 }
-
 table {
   font-size: 15px;
 }
-
 blockquote {
   margin: 1em 0;
-  /* border-left: solid 0.1em #cecece; */
   padding: 0.4em 1.6em;
   position: relative;
   background-color: #f2f2f2;
-  /* box-shadow: 0 -1px 0 #bbbbbb inset; */
 }
-
 .break-all {
   word-break: break-all;
 }
-
-/* blockquote::before {
-  content: "\f10d";
-  font-size: 3em;
-  font-family: "FontAwesome";
-  color: rgba(192, 192, 192, 0.2);
-  position: absolute;
-  left: 6px;
-  top: 0;
-} */
-
 .footnotes {
   margin-top: 70px;
 }
@@ -549,18 +472,15 @@ blockquote {
 .footnotes li {
   font-size: 80%;
 }
-
 @media only screen and (max-width: 800px) {
   blockquote {
     margin: 1em 0;
     padding: 0.5em;
   }
 }
-
 dl dd {
   font-style: italic;
 }
-
 ul.pagination {
   display: flex;
   justify-content: center;
@@ -568,7 +488,6 @@ ul.pagination {
   padding: 0.5em 0;
   list-style: none;
 }
-
 ul.pagination li {
   padding: 0 1em;
 }

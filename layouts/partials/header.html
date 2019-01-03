@@ -7,18 +7,17 @@
     <title>{{ .Site.Title }}{{ if ne .Title .Site.Title }} - {{ .Title }}{{ end }}</title>
     {{ partial "meta" . }}
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint "md5" }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Lato" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ "css/styles.css" | relURL }}" />
-    <link rel="stylesheet" type="text/css" href="{{ "css/syntax.css" | relURL }}" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
 </head>
 
 <body>
     <div id="container">
         <header>
             <a href="/" class="title-link">
-                <img class="logo" src="{{ "images/logo-small.svg" | relURL }}" alt="FormAPI Logo" />
+                {{ partial "images/logo-small.svg" }}
             </a>
             <a href="{{ relURL "/" }}" class="title-link">
                 <h1>
