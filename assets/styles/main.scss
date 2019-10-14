@@ -446,6 +446,11 @@ table tr th {
 table {
   font-size: 15px;
 }
+
+.gist-file table tr td {
+  border-bottom: none;
+}
+
 blockquote {
   margin: 1em 0;
   padding: 0.4em 1.6em;
