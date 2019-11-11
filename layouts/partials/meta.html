@@ -1,16 +1,25 @@
 <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="{{ .Site.Params.description | default "The HTML5 Herald" }}" />
-  <meta name="author" content="{{ .Params.Author | default .Site.Author.name }}" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="{{ .Site.Params.description | default "The HTML5 Herald"}}" />
+<meta
+  name="author"
+  content="{{ .Params.Author | default .Site.Author.name }}"
+/>
 
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://formapi.io{{ "images/logo-opengraph.png" | relURL }}">
-  <meta property="og:image:width" content="400">
-  <meta property="og:image:height" content="400">
-  <meta property="og:image:alt" content="{{ .Site.Params.Description }}">
-  <meta property="og:description" content="FormAPI makes it easy for programmers to generate PDFs.">
-  <meta property="og:title" content="{{ .Site.Title }}{{ if ne .Title .Site.Title }} - {{ .Title }}{{ end }}">
-  <meta property="og:url" content="https://formapi.io{{ .URL }}">
-  <meta name="robots" content="noindex">
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://docspring.com{{"images/logo-opengraph.png" | relURL}}">
+<meta property="og:image:width" content="400" />
+<meta property="og:image:height" content="400" />
+<meta property="og:image:alt" content="{{ .Site.Params.Description }}" />
+<meta
+  property="og:description"
+  content="DocSpring makes it easy for programmers to generate PDFs."
+/>
+<meta
+  property="og:title"
+  content="{{ .Site.Title }}{{ if ne .Title .Site.Title }} - {{ .Title }}{{end}}"
+/>
+<meta property="og:url" content="https://docspring.com{{ .URL }}" />
+<meta name="robots" content="noindex" />
 
-  {{ .Hugo.Generator -}}
+{{ .Hugo.Generator -}}
